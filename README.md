@@ -215,16 +215,18 @@ import matplotlib.pyplot as plt
 sm.qqplot(df["Moderate Negative Skew"],line='45')
 plt.show()
 ```
-![image](https://github.com/user-attachments/assets/78b2cb84-9d1f-4b8a-b6d2-9601119ca864)
+
+<img width="473" alt="Screenshot 2025-04-14 at 3 54 09 PM" src="https://github.com/user-attachments/assets/b8374c15-bee2-4de4-85e4-9086d218aeff" />
 
 
 
 
 ```python
-sm.qqplot(np.reciprocal(df["Moderate Negative Skew_1"]),line='45')
+sm.qqplot(np.reciprocal(df["Moderate Negative Skew"]),line='45')
 plt.show()
 ```
-![image](https://github.com/user-attachments/assets/fc2408e4-4c30-4fde-a182-981f9d08c51a)
+
+<img width="481" alt="Screenshot 2025-04-14 at 3 54 33 PM" src="https://github.com/user-attachments/assets/fdc5a501-347a-4615-9411-0559f79199e7" />
 
 
 
@@ -238,7 +240,8 @@ df["Moderate Negative Skew"]=qt.fit_transform(df[["Moderate Negative Skew"]])
 sm.qqplot(df["Moderate Negative Skew"],line='45')
 plt.show()
 ```
-![image](https://github.com/user-attachments/assets/54312a9a-661d-43b1-9674-414df16cfe7d)
+
+<img width="492" alt="Screenshot 2025-04-14 at 3 54 59 PM" src="https://github.com/user-attachments/assets/a98b36ef-5738-4fbe-8e31-6bb5a29b8754" />
 
 
 ```python
@@ -247,7 +250,8 @@ sm.qqplot(df["Highly Negative Skew"],line='45')
 plt.show()
 ```
 
-![image](https://github.com/user-attachments/assets/3e1dfcdd-4cb3-4a4a-9f76-2b94e38b95f8)
+
+<img width="476" alt="Screenshot 2025-04-14 at 3 55 21 PM" src="https://github.com/user-attachments/assets/e430b24e-c871-4d37-a07c-69d7aea56c6d" />
 
 
 
@@ -255,16 +259,29 @@ plt.show()
 sm.qqplot(df["Highly Negative Skew_1"],line='45')
 plt.show()
 ```
+<img width="486" alt="Screenshot 2025-04-14 at 3 55 41 PM" src="https://github.com/user-attachments/assets/200bb387-ecf2-49dc-a3ae-a4743d648f32" />
 
-![image](https://github.com/user-attachments/assets/faf155fc-92e9-4c5b-8c95-475b18706979)
+
 
 
 ```python
-sm.qqplot(np.reciprocal(df["Moderate Negative Skew"]),line='45')
+dt=pd.read_csv("/content/titanic_dataset.csv")
+from sklearn.preprocessing import QuantileTransformer
+qt=QuantileTransformer(output_distribution='normal',n_quantiles=891)
+dt["Age_1"]=qt.fit_transform(dt[["Age"]])
+sm.qqplot(dt["Age"],line='45')
 plt.show()
 ```
-![image](https://github.com/user-attachments/assets/90ef2694-b61c-45c6-8532-d5fe047af1f2)
 
+
+
+<img width="469" alt="Screenshot 2025-04-14 at 3 56 43 PM" src="https://github.com/user-attachments/assets/8523d6f6-ecd9-4f42-b3d1-ab7f1f383682" />
+
+```python
+sm.qqplot(dt["Age_1"],line='45')
+plt.show()
+```
+<img width="494" alt="Screenshot 2025-04-14 at 3 57 25 PM" src="https://github.com/user-attachments/assets/4f662021-7885-4f2f-8caf-ecfc7fcf7e9e" />
 
 
 
