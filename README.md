@@ -176,20 +176,52 @@ plt.show()
 # RESULT:
 Feature Encoding and Transformation process has been successfully performed using the data set.
 
-```
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
        
